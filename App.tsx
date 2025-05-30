@@ -6,7 +6,7 @@ import { CameraFeed } from './components/CameraFeed';
 import { StatusDisplay } from './components/StatusDisplay';
 import { LoadingSpinner } from './components/LoadingSpinner';
 
-const CAPTURE_INTERVAL_MS = 5000; // Capture frame every 5 seconds
+const CAPTURE_INTERVAL_MS = 7000; // Capture frame every 5 seconds
 
 const App: React.FC = () => {
   // Camera related state
@@ -248,6 +248,9 @@ const App: React.FC = () => {
         <p className="text-gray-400 mt-4 text-base sm:text-lg max-w-2xl mx-auto">
           Utilizing Gemini API for real-time &amp; uploaded image insights.
         </p>
+        <p className="text-gray-400 mt-4 text-base sm:text-lg max-w-2xl mx-auto">
+          Created by I Gede Bagus Jayendra.
+        </p>
       </header>
 
       {!apiKeyAvailable && (cameraGenderResult.status === GenderDetectionStatus.API_KEY_MISSING || fileUploadResult?.status === GenderDetectionStatus.API_KEY_MISSING) && (
@@ -356,7 +359,7 @@ const App: React.FC = () => {
       
       <footer className="mt-auto py-8 text-center text-gray-500 text-xs sm:text-sm shrink-0 px-4">
         <p>Note: Gender detection is based on visual cues and AI perception. It may not be accurate and should be used responsibly.</p>
-        <p>&copy; {new Date().getFullYear()} AI Experiments Inc. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} gedxxe. All Rights Reserved.</p>
       </footer>
     </div>
   );
