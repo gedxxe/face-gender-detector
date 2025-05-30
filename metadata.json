@@ -1,0 +1,7 @@
+{
+  "name": "Face Gender Detector",
+  "description": "A React web application that uses the device camera and Gemini API to detect the perceived gender of a face in real-time.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
