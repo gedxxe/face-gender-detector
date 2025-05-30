@@ -2,23 +2,18 @@
   "version": 2,
   "name": "face-gender-detector",
   "builds": [
-    { "src": "index.html", "use": "@vercel/static" },
-    { "src": "index.tsx", "use": "@vercel/static" },
-    { "src": "App.tsx", "use": "@vercel/static" },
-    { "src": "types.ts", "use": "@vercel/static" },
-    { "src": "metadata.json", "use": "@vercel/static" },
-    { "src": "services/geminiService.ts", "use": "@vercel/static" },
-    { "src": "components/CameraFeed.tsx", "use": "@vercel/static" },
-    { "src": "components/StatusDisplay.tsx", "use": "@vercel/static" },
-    { "src": "components/LoadingSpinner.tsx", "use": "@vercel/static" }
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "public"
+      }
+    }
   ],
   "routes": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/.*",
-      "dest": "/index.html"
+      "src": "/(.*)",
+      "dest": "/public/index.html"
     }
   ]
 }
